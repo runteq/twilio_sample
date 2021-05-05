@@ -1,0 +1,11 @@
+.card
+  .card-header
+    h4.card-title 告白登録
+  .card-body
+    = bootstrap_form_with model: @message do |f|
+      = f.text_field :from_name
+      = f.text_field :to_name
+      = f.password_field :phone_number
+      = f.text_area :message
+      .btn-submit.text-center
+        = f.submit '告白する', class: 'btn btn-primary'

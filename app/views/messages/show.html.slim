@@ -1,0 +1,22 @@
+.card
+  .card-header
+    h4.card-title 告白詳細
+    .card-tools
+      = link_to '戻る', messages_path, class: 'btn btn-outline-secondary'
+  .card-body
+    table.table.table-striped
+      tr
+        th = Message.human_attribute_name(:result)
+        td = @message.result_i18n
+      tr
+        th = Message.human_attribute_name(:from_name)
+        td = @message.from_name
+      tr
+        th = Message.human_attribute_name(:to_name)
+        td = @message.to_name
+      tr
+        th = Message.human_attribute_name(:phone_number)
+        td xxxxxxxxxxxxxxx
+      tr
+        th = Message.human_attribute_name(:message)
+        td = @message.message

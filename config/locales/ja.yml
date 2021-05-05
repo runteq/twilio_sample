@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    models:
+      message: 告白
+    attributes:
+      message:
+        phone_number: 電話番号
+        from_name: あなたのお名前
+        to_name: 告白相手のお名前
+        message: 告白文
+        result: 告白結果
+  enums:
+    message:
+      result:
+        result_ok: OK
+        result_wait: 少し考えさせてください
+        result_ng: ごめんなさい
+        report_to_management: 運営に通報されました

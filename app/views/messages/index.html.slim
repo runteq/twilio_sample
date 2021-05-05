@@ -1,0 +1,20 @@
+.card
+  .card-header
+    h4.card-title 告白一覧
+    .card-tools
+      = link_to '新規登録', new_message_path, class: 'btn btn-outline-primary'
+  .card-body
+    table.table.table-bordered
+      thead
+        tr
+          th = Message.human_attribute_name :from_name
+          th = Message.human_attribute_name :to_name
+          th = Message.human_attribute_name :result
+          th
+      tbody
+        - @messages.each do |message|
+          tr
+            td = message.from_name
+            td = message.to_name
+            td = message.result_i18n
+            td = link_to '詳細', message_path(message), class: 'btn btn-outline-secondary'
